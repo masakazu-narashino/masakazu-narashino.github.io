@@ -6,177 +6,76 @@
 <meta name="description" content="田中まさかずの公式ホームページ。習志野市での活動、プロフィール、政策、活動報告をご紹介します。">
 <title>田中まさかず｜習志野市｜公式ホームページ</title>
 <style>
-:root{--blue:#2478c9;--navy:#12385d;--light:#eef7ff;--text:#243447}
-*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;color:var(--text);font-family:-apple-system,BlinkMacSystemFont,"Helvetica Neue","Hiragino Kaku Gothic ProN","Yu Gothic",sans-serif;line-height:1.9}a{color:inherit;text-decoration:none}
-header{position:sticky;top:0;z-index:10;background:rgba(255,255,255,.96);border-bottom:1px solid #e5edf5}nav{max-width:1100px;margin:auto;padding:14px 24px;display:flex;align-items:center;justify-content:space-between;gap:20px}.logo{color:var(--navy);font-weight:800;font-size:20px;white-space:nowrap}.menu{display:flex;flex-wrap:wrap;gap:20px;font-size:13px}
-.hero{background:linear-gradient(145deg,#eaf5ff 5%,#c7e6ff 62%,#b1d6fa);overflow:hidden}.hero-inner{max-width:1200px;margin:auto;padding:54px 24px 0}.hero-top{display:grid;grid-template-columns:1fr 1fr;align-items:center;gap:48px}.eyebrow{color:var(--blue);font-size:13px;letter-spacing:.16em;font-weight:800}.city-label{display:inline-block;margin:0 0 16px;padding:4px 15px;background:var(--navy);color:white;border-radius:99px;font-weight:700;font-size:13px;letter-spacing:.09em}.hero-intro{padding:15px 0}.hero-intro .catch{font-size:clamp(23px,3.1vw,41px);font-weight:800;line-height:1.45;color:var(--navy);letter-spacing:.02em;margin:16px 0}.hero-intro .lead{font-size:clamp(14px,1.5vw,17px)}.hero-photo{width:100%;height:clamp(300px,38vw,470px);object-fit:cover;object-position:center 25%;display:block;border-radius:24px;box-shadow:0 18px 40px #12385d22}.hero-name{color:var(--navy);font-size:clamp(56px,10.9vw,156px);font-weight:900;line-height:1.04;letter-spacing:-.065em;margin:18px 0 -0.06em;text-align:center;white-space:nowrap;font-feature-settings:"palt" 1}.hero-name span{letter-spacing:-.08em}.hero-name small{display:block;font-size:clamp(11px,1.3vw,15px);font-weight:700;letter-spacing:.22em;line-height:1.4;margin:0 0 5px}.button{display:inline-block;margin-top:18px;padding:10px 25px;background:var(--blue);color:white;border-radius:5px;font-weight:700}.button:hover{background:var(--navy)}
-section{max-width:1000px;margin:auto;padding:76px 24px;scroll-margin-top:85px}.section-title{margin:0 0 8px;color:var(--navy);font-size:30px;letter-spacing:.06em}.section-sub{margin:0 0 28px;color:var(--blue);font-size:12px;letter-spacing:.16em}.cards{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px}.card{padding:24px;background:var(--light);border-top:3px solid var(--blue)}.card h3{margin-top:0;color:var(--navy)}.note-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:22px}.note-card{min-width:0;border:1px solid #dce7f1;border-radius:6px;overflow:hidden;background:#fff}.note-card a{display:block;height:100%}.note-card img{display:block;width:100%;aspect-ratio:16/9;object-fit:cover;background:#eef7ff}.note-card-body{padding:15px 17px 20px}.note-card h3{font-size:16px;line-height:1.6;color:var(--navy);margin:7px 0 0}.note-card:hover{box-shadow:0 5px 20px #12385d18;transform:translateY(-2px);transition:.2s}.news-item{padding:18px 0;border-bottom:1px solid #dce7f1}.news-item time{display:block;color:var(--blue);font-size:13px}.news-item a:hover{color:var(--blue);text-decoration:underline}.contact{background:var(--light);max-width:none;text-align:center}.contact-inner{max-width:800px;margin:auto;padding:58px 24px}.mail-link{display:inline-flex;align-items:center;justify-content:center;gap:10px;margin-top:12px;padding:13px 24px;border-radius:6px;background:var(--blue);color:#fff;font-weight:800;overflow-wrap:anywhere}.mail-link:hover{background:var(--navy)}footer{padding:26px 20px;text-align:center;background:var(--navy);color:white;font-size:12px}
-@media(max-width:700px){nav{align-items:flex-start;flex-direction:column;gap:8px;padding:12px 18px}.menu{gap:8px 16px}.hero-inner{padding:30px 16px 0}.hero-top{grid-template-columns:1fr;gap:22px}.hero-intro{padding:0}.hero-intro .catch{margin:10px 0}.hero-photo{height:clamp(260px,85vw,440px);max-width:440px;margin:auto;border-radius:18px}.hero-name{font-size:clamp(39px,11.7vw,82px);margin:20px 0 0;letter-spacing:-.08em}.hero-name span{letter-spacing:-.09em}.hero-name small{font-size:11px;letter-spacing:.12em}section{padding:54px 20px}.cards{grid-template-columns:1fr}.note-grid{grid-template-columns:1fr}}
-@media(max-width:370px){.hero-name{font-size:11.3vw}}
+:root {--blue:#2478c9;--navy:#12385d;--light:#eef7ff;--text:#243447}
+* {box-sizing:border-box}
+html {scroll-behavior:smooth}
+body {margin:0;color:var(--text);line-height:1.9}
+a {color:inherit;text-decoration:none}
+header {position:sticky;top:0;z-index:10;background:rgba(255,255,255,.96);border-bottom:1px solid #e5edf5}
+nav {max-width:1100px;margin:auto;padding:14px 24px;display:flex;align-items:center;justify-content:space-between;gap:20px}
+.logo {color:var(--navy);font-weight:800;font-size:20px;white-space:nowrap}
+.menu {display:flex;flex-wrap:wrap;gap:20px;font-size:13px}
+section {max-width:1000px;margin:auto;padding:76px 24px;scroll-margin-top:85px}
+.section-title {margin:0 0 8px;color:var(--navy);font-size:30px;letter-spacing:.06em}
+.section-sub {margin:0 0 28px;color:var(--blue);font-size:12px;letter-spacing:.16em}
+.cards {display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px}
+.card {padding:24px;background:var(--light);border-top:3px solid var(--blue)}
+.card h3 {margin-top:0;color:var(--navy)}
+.note-grid {display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:22px}
+.note-card {min-width:0;border:1px solid #dce7f1;border-radius:6px;overflow:hidden;background:#fff}
+.note-card a {display:block;height:100%}
+.note-card img {display:block;width:100%;aspect-ratio:16/9;object-fit:cover;background:#eef7ff}
+.note-card-body {padding:15px 17px 20px}
+.note-card h3 {font-size:16px;line-height:1.6;color:var(--navy);margin:7px 0 0}
+.note-card:hover {box-shadow:0 5px 20px #12385d18;transform:translateY(-2px);transition:.2s}
+.news-item {padding:18px 0;border-bottom:1px solid #dce7f1}
+.news-item time {display:block;color:var(--blue);font-size:13px}
+.news-item a:hover {color:var(--blue);text-decoration:underline}
+.contact {background:var(--light);max-width:none;text-align:center}
+.contact-inner {max-width:800px;margin:auto;padding:58px 24px}
+.mail-link {display:inline-flex;align-items:center;justify-content:center;gap:10px;margin-top:12px;padding:13px 24px;border-radius:6px;background:var(--blue);color:#fff;font-weight:800;overflow-wrap:anywhere}
+.mail-link:hover {background:var(--navy)}
+footer {padding:26px 20px;text-align:center;background:var(--navy);color:white;font-size:12px}
+
+@media(max-width:700px) {section {padding:54px 20px} .cards {grid-template-columns:1fr} .note-grid {grid-template-columns:1fr}}
+/* 共通フォント */
+body {font-family:"Noto Sans JP",sans-serif;font-weight:600}
+h1,h2,h3,.logo,.section-title {font-weight:900}
+nav a,.menu a,.button {font-weight:800}
+
+/* メインビジュアル */
+.hero {background:linear-gradient(145deg,#eaf5ff 5%,#c7e6ff 62%,#b1d6fa);overflow:hidden}
+.hero-inner {max-width:1200px;margin:auto;padding:65px 24px}
+.hero-top {display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.1fr);align-items:center;gap:30px}
+.hero-intro {min-width:0;padding:15px 0}
+.city-label {display:inline-block;margin:0 0 16px;padding:4px 15px;background:var(--navy);color:white;border-radius:99px;font-weight:700;font-size:13px;letter-spacing:.09em}
+.eyebrow {color:var(--blue);font-size:13px;letter-spacing:.16em;font-weight:800}
+.hero-name {color:var(--navy);font-size:clamp(54px,6.5vw,104px);font-weight:900;line-height:1.05;letter-spacing:-.05em;margin:20px 0 28px;text-align:left;white-space:normal;overflow-wrap:anywhere;font-feature-settings:"palt" 1}
+.hero-name small {display:block;font-size:15px;letter-spacing:.15em;line-height:1.4;margin-bottom:14px}
+.hero-name span {display:block;letter-spacing:-.08em}
+.hero-intro .catch {font-size:clamp(30px,3.5vw,52px);font-weight:900;line-height:1.35;color:var(--navy);margin:16px 0}
+.hero-intro .lead {font-size:clamp(14px,1.5vw,17px)}
+.button {display:inline-block;margin-top:18px;padding:10px 25px;background:var(--blue);color:white;border-radius:5px;font-weight:800}
+.button:hover {background:var(--navy)}
+/* 縦長3:4、枠内で自然にトリミング */
+.hero-photo {display:block;width:100%;height:auto;aspect-ratio:3/4;object-fit:cover;object-position:center 35%;border-radius:18px;box-shadow:0 18px 40px #12385d22}
+
+@media(max-width:700px) {
+  nav {align-items:flex-start;flex-direction:column;gap:8px;padding:12px 18px}
+  .menu {gap:8px 16px}
+  .hero-inner {padding:30px 16px 35px}
+  .hero-top {grid-template-columns:minmax(0,1fr);gap:24px}
+  .hero-intro {padding:0}
+  .hero-name {font-size:clamp(48px,11vw,76px)}
+  .hero-name small {font-size:11px;letter-spacing:.12em}
+  .hero-intro .catch {font-size:clamp(27px,7vw,40px);margin:10px 0}
+  .hero-photo {max-width:440px;margin:auto}
+}
+@media(max-width:370px) {.hero-name {font-size:11vw}}
 </style>
 <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@500;600;700;800;900&display=swap" rel="stylesheet">
 
-<style>
-body {
-  font-family: "Noto Sans JP", sans-serif !important;
-  font-weight: 600;
-}
 
-h1, h2, h3,
-.logo, .hero-name,
-.section-title, .catch {
-  font-family: "Noto Sans JP", sans-serif !important;
-  font-weight: 900 !important;
-}
-
-nav a, .menu a, .button {
-  font-weight: 800 !important;
-}
-
-p, li {
-  font-weight: 600;
-}
-
-.hero-name-main {
-  font-size: clamp(64px, 8vw, 130px) !important;
-  font-weight: 900 !important;
-  line-height: 1.05 !important;
-  letter-spacing: -0.05em;
-  margin: 20px 0 28px;
-}
-
-.hero-name-main small {
-  display: block;
-  font-size: 15px !important;
-  letter-spacing: 0.15em;
-  margin-bottom: 14px;
-}
-
-.hero-intro .catch {
-  font-size: clamp(30px, 3.5vw, 52px) !important;
-  line-height: 1.35;
-  font-weight: 900 !important;
-}
-
-@media (max-width: 700px) {
-  .hero-name-main {
-    font-size: clamp(48px, 10vw, 76px) !important;
-  }
-}
-.hero-name-main {
-  white-space: normal !important;
-  overflow-wrap: anywhere;
-  text-align: left;
-}
-
-.hero-name-main span {
-  display: block;
-}
-
-@media (max-width: 700px) {
-  .hero-name-main {
-    font-size: clamp(48px, 11vw, 76px) !important;
-  }
-}
-/* 写真を大きな縦長バストアップに */
-.hero-top {
-  grid-template-columns: 1fr 1.1fr;
-  gap: 30px;
-}
-
-.hero-photo {
-  width: 100%;
-  height: 540px;
-  object-fit: cover;
-  object-position: center 12%;
-  border-radius: 18px;
-  align-self: center;
-}
-
-/* スマートフォン用 */
-@media (max-width: 700px) {
-  .hero-top {
-    grid-template-columns: 1fr;
-    gap: 24px;
-  }
-
-  .hero-photo {
-    width: 100%;
-    height: auto;
-    aspect-ratio: 4 / 5;
-    max-width: 440px;
-    object-fit: cover;
-    object-position: center 20%;
-  }
-}
-.hero-inner {
-  padding-bottom: 50px;
-}
-
-.hero-top {
-  align-items: center;
-}
-
-@media (max-width: 700px) {
-  .hero-inner {
-    padding-bottom: 35px;
-  }
-
-  .hero-photo {
-    height: 440px;
-    max-width: 440px;
-  }
-}
-/* 写真を上へ移動し、上下のバランスを調整 */
-.hero-photo {
-  transform: translateY(-45px);
-  object-position: center 35%;
-}
-
-/* 写真の上下に余裕を持たせる */
-.hero-inner {
-  padding-bottom: 65px;
-}
-
-/* スマートフォン */
-@media (max-width: 700px) {
-  .hero-photo {
-    transform: translateY(0);
-    object-position: center 35%;
-  }
-
-  .hero-inner {
-    padding-bottom: 35px;
-  }
-}/* 写真を縦長に固定 */
-@media (min-width: 701px) {
-  .hero-photo {
-    width: 100%;
-    height: auto;
-    aspect-ratio: 3 / 4;
-    object-fit: cover;
-    object-position: center 35%;
-    transform: none;
-    align-self: center;
-  }
-
-  .hero-inner {
-    padding-top: 65px;
-    padding-bottom: 65px;
-  }
-}
-
-/* スマートフォン */
-@media (max-width: 700px) {
-  .hero-photo {
-    width: 100%;
-    height: auto;
-    aspect-ratio: 3 / 4;
-    object-fit: cover;
-    object-position: center 35%;
-    transform: none;
-  }
-}</style>
 </head>
 <body>
 <header><nav><a class="logo" href="#home">田中まさかず</a><div class="menu"><a href="#profile">プロフィール</a><a href="#vision">ビジョン</a><a href="#policy">政策</a><a href="#news">活動報告</a><a href="#contact">お問い合わせ</a></div></nav></header>

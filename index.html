@@ -6,30 +6,54 @@
 <meta name="description" content="田中まさかずの公式ホームページ。プロフィール、政策、活動報告をご紹介します。">
 <title>田中まさかず｜公式ホームページ</title>
 <style>
-:root{--ink:#102b48;--blue:#176fd5;--electric:#39a5ff;--pale:#eef5fb;--muted:#60748a;--line:#d9e5ef}
-*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;color:var(--ink);background:#fff;font-family:-apple-system,BlinkMacSystemFont,"Helvetica Neue","Hiragino Kaku Gothic ProN","Yu Gothic",sans-serif;line-height:1.85}a{color:inherit;text-decoration:none}button{font:inherit}
-header{position:sticky;top:0;z-index:30;background:rgba(255,255,255,.94);backdrop-filter:blur(18px);border-bottom:1px solid rgba(16,43,72,.08)}nav{max-width:1320px;margin:auto;padding:15px 38px;display:flex;justify-content:space-between;align-items:center;gap:24px}.logo{font-weight:900;letter-spacing:.06em;font-size:21px;white-space:nowrap}.logo span{color:var(--blue)}.menu{display:flex;gap:27px;flex-wrap:wrap;font-size:12px;font-weight:800;letter-spacing:.07em}.menu a:hover{color:var(--blue)}
-.hero{background:#092947;color:white;position:relative;overflow:hidden}.hero:before{content:"";position:absolute;inset:0;background:radial-gradient(ellipse at 70% 25%,#1469ac88,transparent 54%),linear-gradient(125deg,#071c34 12%,#0d3c67 100%)}.hero:after{content:"";position:absolute;right:-100px;top:-200px;width:620px;height:620px;border:1px solid #ffffff25;border-radius:50%;pointer-events:none}.hero-inner{position:relative;max-width:1320px;min-height:660px;margin:auto;padding:65px 38px 0;display:grid;grid-template-columns:1.15fr .85fr;align-items:end;gap:0}.hero-copy{position:relative;z-index:2;align-self:center;padding:25px 0 75px}.eyebrow{color:#7fc7ff;letter-spacing:.3em;font-size:13px;font-weight:800}.hero h1{font-size:clamp(76px,10vw,150px);line-height:1.06;letter-spacing:-.085em;margin:22px 0 25px;font-weight:900;white-space:nowrap}.hero h1 span{display:block}.hero h1 .given{color:#fff}.hero h1 .surname{color:#fff}.hero h1 .given::after{content:".";color:#48aeff}.catch{font-size:clamp(21px,2.3vw,31px);line-height:1.55;font-weight:800;letter-spacing:.035em;margin:0 0 10px}.hero-lead{color:#d2e3f2;font-size:14px;margin:0}.hero-photo-wrap{position:relative;align-self:end;min-width:0}.hero-photo-wrap:before{content:"";position:absolute;inset:14% -20% 0 8%;border-radius:50% 50% 0 0;background:linear-gradient(145deg,#3998e0,#13508b);opacity:.65}.hero-photo{position:relative;display:block;width:100%;height:610px;object-fit:cover;object-position:center 22%;filter:contrast(1.04);border-radius:0}.hero-bottom{position:absolute;bottom:20px;left:38px;color:#93b8d8;font-size:11px;letter-spacing:.23em;font-weight:800}.hero-number{position:absolute;right:38px;top:35px;color:#ffffff45;font-size:11px;letter-spacing:.2em}
-.button{display:inline-flex;align-items:center;gap:18px;padding:13px 22px;background:var(--blue);color:white;font-size:13px;font-weight:800;letter-spacing:.04em;transition:background .2s,transform .2s}.button:hover{background:#0d56aa;transform:translateY(-2px)}.hero .button{margin-top:27px;background:#fff;color:var(--ink)}.hero .button:hover{background:#dcefff}
-section{max-width:1160px;margin:auto;padding:108px 38px;scroll-margin-top:80px}.section-heading{display:flex;align-items:baseline;gap:24px;flex-wrap:wrap;margin-bottom:42px}.section-title{margin:0;font-size:clamp(36px,5vw,59px);line-height:1.18;letter-spacing:-.05em;font-weight:900}.section-sub{font-size:12px;letter-spacing:.25em;font-weight:900;color:var(--blue)}.section-intro{font-size:17px;max-width:750px}.profile-layout{display:grid;grid-template-columns:.75fr 1.25fr;gap:75px}.profile-name{font-size:clamp(34px,4vw,50px);font-weight:900;line-height:1.3;margin:0}.profile-name-en{font-size:11px;letter-spacing:.24em;color:var(--blue);font-weight:800}.profile-list{list-style:none;padding:0;margin:0 0 28px}.profile-list li{padding:14px 0;border-bottom:1px solid var(--line);font-size:15px}.profile-text{color:#506277;font-size:15px}
-.vision{max-width:none;background:var(--pale);position:relative}.vision-inner{max-width:1084px;margin:auto}.vision-message{font-size:clamp(24px,3vw,38px);font-weight:900;line-height:1.65;letter-spacing:-.025em;max-width:850px}.vision-copy{max-width:750px;color:#4d637a}.cards{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px}.card{padding:30px 26px 34px;border:1px solid var(--line);background:white;min-height:240px;transition:transform .2s,box-shadow .2s}.card:hover{transform:translateY(-4px);box-shadow:0 14px 30px #143e6512}.card-num{font-size:13px;letter-spacing:.15em;color:var(--blue);font-weight:900}.card h3{font-size:21px;line-height:1.45;margin:22px 0 14px;letter-spacing:-.03em}.card p{font-size:14px;color:#5b6f83;margin:0}
-.news-section{background:#f8fbfd;max-width:none}.news-inner{max-width:1084px;margin:auto}.note-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px}.note-card{min-width:0;background:#fff;border:1px solid var(--line);overflow:hidden;transition:transform .2s,box-shadow .2s}.note-card:hover{transform:translateY(-4px);box-shadow:0 10px 24px #12385d18}.note-card a{display:block;height:100%}.note-card img{display:block;width:100%;aspect-ratio:16/9;object-fit:cover;background:#e9f1f8}.note-card-body{padding:21px}.note-card time{color:var(--blue);font-size:12px;font-weight:800}.note-card h3{font-size:17px;line-height:1.65;margin:10px 0 0}.news-more{margin-top:30px}
-.contact{background:#0b2a48;color:#fff;text-align:center;max-width:none}.contact .section-heading{justify-content:center}.contact .section-sub{color:#76c3ff}.contact p{color:#d1e0ee}.contact-inner{max-width:800px;margin:auto}footer{padding:26px 20px;text-align:center;background:#071e34;color:#a8bfd4;font-size:12px}
-@media(max-width:900px){.hero-inner{min-height:580px}.hero h1{font-size:clamp(70px,9vw,115px)}.hero-photo{height:520px}.cards{grid-template-columns:repeat(2,minmax(0,1fr))}.profile-layout{gap:40px}}
-@media(max-width:700px){nav{padding:12px 20px;align-items:flex-start;flex-direction:column;gap:7px}.logo{font-size:19px}.menu{gap:8px 17px;font-size:11px}.hero-inner{display:flex;flex-direction:column;align-items:stretch;min-height:0;padding:38px 20px 0}.hero-copy{padding:0;align-self:auto}.hero h1{font-size:clamp(70px,17vw,112px);margin:18px 0 20px}.hero-photo-wrap{align-self:center;width:min(100%,450px);margin-top:25px}.hero-photo{height:410px;object-position:center 18%}.hero-bottom{left:20px;bottom:12px}.hero-number{right:20px;top:15px}.catch{font-size:23px}.hero-lead{font-size:13px}section{padding:75px 20px}.section-heading{gap:8px 18px;margin-bottom:28px}.profile-layout{grid-template-columns:1fr;gap:24px}.cards{grid-template-columns:1fr}.card{min-height:0;padding:25px}.note-grid{grid-template-columns:1fr}.vision-message{font-size:26px}}
-@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{transition:none!important}}
+:root { --blue:#2478c9; --navy:#12385d; --light:#eef7ff; --text:#243447; }
+* {box-sizing:border-box} html {scroll-behavior:smooth}
+body {margin:0;color:var(--text);font-family:-apple-system,BlinkMacSystemFont,"Helvetica Neue","Hiragino Kaku Gothic ProN","Yu Gothic",sans-serif;line-height:1.9}
+a {color:inherit;text-decoration:none}
+header {position:sticky;top:0;z-index:10;background:rgba(255,255,255,.96);border-bottom:1px solid #e5edf5}
+nav {max-width:1100px;margin:auto;padding:14px 24px;display:flex;align-items:center;justify-content:space-between;gap:20px}
+.logo {color:var(--navy);font-weight:800;font-size:20px;white-space:nowrap}
+.menu {display:flex;flex-wrap:wrap;gap:20px;font-size:13px}
+.hero {background:linear-gradient(135deg,#eaf5ff,#b9ddff);overflow:hidden}
+.hero-inner {max-width:1100px;margin:auto;padding:52px 24px;display:grid;grid-template-columns:1fr 1fr;align-items:center;gap:40px}
+.eyebrow {color:var(--blue);font-size:12px;letter-spacing:.18em;font-weight:700}
+h1 {color:var(--navy);font-size:clamp(36px,5vw,64px);line-height:1.3;margin:12px 0;letter-spacing:.04em}
+.catch {font-size:clamp(17px,2vw,24px);font-weight:700;line-height:1.7}
+.hero-photo {width:100%;max-height:520px;object-fit:cover;object-position:center 25%;display:block;border-radius:4px}
+.button {display:inline-block;margin-top:18px;padding:10px 25px;background:var(--blue);color:white;border-radius:3px;font-weight:700}
+section {max-width:1000px;margin:auto;padding:76px 24px;scroll-margin-top:70px}
+.section-title {margin:0 0 8px;color:var(--navy);font-size:30px;letter-spacing:.06em}
+.section-sub {margin:0 0 28px;color:var(--blue);font-size:12px;letter-spacing:.16em}
+.cards {display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px}
+.card {padding:24px;background:var(--light);border-top:3px solid var(--blue)}
+.card h3 {margin-top:0;color:var(--navy)}
+.note-grid {display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:22px}
+.note-card {min-width:0;border:1px solid #dce7f1;border-radius:6px;overflow:hidden;background:#fff}
+.note-card a {display:block;height:100%}
+.note-card img {display:block;width:100%;aspect-ratio:16/9;object-fit:cover;background:#eef7ff}
+.note-card-body {padding:15px 17px 20px}
+.note-card h3 {font-size:16px;line-height:1.6;color:var(--navy);margin:7px 0 0}
+.note-card:hover {box-shadow:0 5px 20px #12385d18;transform:translateY(-2px);transition:.2s}
+.news-item {padding:18px 0;border-bottom:1px solid #dce7f1}
+.news-item time {display:block;color:var(--blue);font-size:13px}
+.news-item a:hover {color:var(--blue);text-decoration:underline}
+.contact {background:var(--light);max-width:none;text-align:center}
+.contact-inner {max-width:800px;margin:auto;padding:0 24px}
+footer {padding:26px 20px;text-align:center;background:var(--navy);color:white;font-size:12px}
+@media(max-width:700px){nav{align-items:flex-start;flex-direction:column;gap:8px;padding:12px 18px}.menu{gap:8px 16px}.hero-inner{grid-template-columns:1fr;padding:36px 20px;gap:24px}.hero-photo{max-height:430px;width:min(100%,420px);margin:auto}section{padding:54px 20px}.cards{grid-template-columns:1fr}.note-grid{grid-template-columns:1fr}}
 </style>
 </head>
 <body>
-<header><nav><a class="logo" href="#home">田中<span>まさかず</span></a><div class="menu"><a href="#profile">プロフィール</a><a href="#vision">ビジョン</a><a href="#policy">政策</a><a href="#news">活動報告</a><a href="#contact">お問い合わせ</a></div></nav></header>
+<header><nav><a class="logo" href="#home">田中まさかず</a><div class="menu"><a href="#profile">プロフィール</a><a href="#vision">ビジョン</a><a href="#policy">政策</a><a href="#news">活動報告</a><a href="#contact">お問い合わせ</a></div></nav></header>
 <main>
-<div class="hero" id="home"><div class="hero-inner"><div class="hero-copy"><div class="eyebrow">MASAKAZU TANAKA / NARASHINO</div><h1><span class="surname">田中</span><span class="given">まさかず</span></h1><p class="catch">強く、しなやかな<br>習志野をつくる。</p><p class="hero-lead">未来の子供達の目線から、まちの未来を考える。</p><a class="button" href="#profile">プロフィールを見る <span aria-hidden="true">↗</span></a></div><div class="hero-photo-wrap"><img class="hero-photo" src="portrait.jpg" alt="田中まさかずのプロフィール写真"></div><div class="hero-bottom">SCROLL TO EXPLORE ↓</div><div class="hero-number">OFFICIAL WEBSITE / 2026</div></div></div>
-<section id="profile"><div class="section-heading"><h2 class="section-title">プロフィール</h2><span class="section-sub">PROFILE</span></div><div class="profile-layout"><div><h3 class="profile-name">田中まさかず</h3><p class="profile-name-en">MASAKAZU TANAKA</p></div><div><ul class="profile-list"><li>習志野市立藤崎小学校 出身</li><li>習志野市立第五中学校 出身</li><li>産業能率大学 卒業（学士〈マネジメント〉）</li><li>衆議院議員 小林鷹之 元公設秘書</li><li>国会議員政策担当秘書任用資格保有</li></ul><p class="profile-text">これまでの経験を生かし、習志野のまちづくりや行政のあり方について考え、発信していきます。</p></div></div></section>
-<section id="vision" class="vision"><div class="vision-inner"><div class="section-heading"><h2 class="section-title">ビジョン</h2><span class="section-sub">VISION</span></div><p class="vision-message">大きな言葉だけではなく、<br>日々の暮らしに根ざした課題から、<br>習志野の未来を考える。</p><p class="vision-copy">地域の声とデータの両方を大切にし、具体的な提案につなげていきます。</p></div></section>
-<section id="policy"><div class="section-heading"><h2 class="section-title">政策</h2><span class="section-sub">POLICY</span></div><div class="cards"><article class="card"><span class="card-num">01 / POLICY</span><h3>納得できる行政運営</h3><p>データと費用対効果を踏まえ、政策を検証する行政運営を考えます。</p></article><article class="card"><span class="card-num">02 / POLICY</span><h3>公共施設の再生</h3><p>将来の人口や財政を見据え、公共施設の維持管理と再編を考えます。</p></article><article class="card"><span class="card-num">03 / POLICY</span><h3>災害に強いまち</h3><p>地域の防災力と、災害に備えるまちづくりについて考えます。</p></article><article class="card"><span class="card-num">04 / POLICY</span><h3>緑と暮らしやすさ</h3><p>緑陰や都市機能の充実を通じ、日々の暮らしやすさを考えます。</p></article><article class="card"><span class="card-num">05 / POLICY</span><h3>行政のデジタル化</h3><p>デジタル技術を活用し、利便性と行政サービスの向上を目指します。</p></article><article class="card"><span class="card-num">06 / POLICY</span><h3>これからのまちづくり</h3><p>人口や地域の特性を踏まえ、持続可能な都市のあり方を考えます。</p></article></div></section>
-<section id="news" class="news-section"><div class="news-inner"><div class="section-heading"><h2 class="section-title">活動報告</h2><span class="section-sub">NEWS &amp; ACTIVITIES</span></div><div id="note-articles" aria-live="polite"><p>最新記事を読み込み中です。</p></div><p class="news-more"><a class="button" href="https://note.com/masakazu_tanaka" target="_blank" rel="noopener noreferrer">noteですべての記事を見る ↗</a></p></div></section>
-<section class="contact" id="contact"><div class="contact-inner"><div class="section-heading"><h2 class="section-title">お問い合わせ</h2><span class="section-sub">CONTACT</span></div><p>ご意見・ご質問などは、下記の連絡先からお寄せください。</p><p>お問い合わせ先は公開前に設定してください。</p></div></section>
-</main><footer><p>田中まさかず 公式ホームページ</p><p>© TANAKA MASAKAZU</p></footer>
+<div class="hero" id="home"><div class="hero-inner"><div><div class="eyebrow">TANAKA MASAKAZU</div><h1>田中<br>まさかず</h1><p class="catch">強く、しなやかな<br>習志野をつくる。</p><p>未来の子供達の目線から、まちの未来を考える。</p><a class="button" href="#profile">プロフィールを見る →</a></div><img class="hero-photo" src="portrait.jpg" alt="田中まさかずのプロフィール写真"></div></div>
+<section id="profile"><h2 class="section-title">プロフィール</h2><p class="section-sub">PROFILE</p><h3>田中まさかず</h3><p>国会議員政策担当秘書任用資格保有<br>元衆議院議員公設秘書</p><p>これまでの経験を生かし、習志野のまちづくりや行政のあり方について考え、発信していきます。</p></section>
+<section id="vision" style="background:#f5f9fd;max-width:none"><div style="max-width:952px;margin:auto"><h2 class="section-title">ビジョン</h2><p class="section-sub">VISION</p><p>大きな言葉だけではなく、日々の暮らしに根ざした課題から、習志野の未来を考える。</p><p>地域の声とデータの両方を大切にし、具体的な提案につなげていきます。</p></div></section>
+<section id="policy"><h2 class="section-title">政策</h2><p class="section-sub">POLICY</p><div class="cards"><article class="card"><h3>01　納得できる行政運営</h3><p>データと費用対効果を踏まえ、政策を検証する行政運営を考えます。</p></article><article class="card"><h3>02　公共施設の再生</h3><p>将来の人口や財政を見据え、公共施設の維持管理と再編を考えます。</p></article><article class="card"><h3>03　災害に強いまち</h3><p>地域の防災力と、災害に備えるまちづくりについて考えます。</p></article><article class="card"><h3>04　緑と暮らしやすさ</h3><p>緑陰や都市機能の充実を通じ、日々の暮らしやすさを考えます。</p></article><article class="card"><h3>05　行政のデジタル化</h3><p>デジタル技術を活用し、利便性と行政サービスの向上を目指します。</p></article><article class="card"><h3>06　これからのまちづくり</h3><p>人口や地域の特性を踏まえ、持続可能な都市のあり方を考えます。</p></article></div></section>
+<section id="news"><h2 class="section-title">活動報告</h2><p class="section-sub">NEWS &amp; ACTIVITIES</p><div id="note-articles" aria-live="polite"><p>最新記事を読み込み中です。</p></div><p><a class="button" href="https://note.com/masakazu_tanaka" target="_blank" rel="noopener noreferrer">noteですべての記事を見る →</a></p></section>
+<div class="contact" id="contact"><div class="contact-inner" style="padding-top:58px;padding-bottom:58px"><h2 class="section-title">お問い合わせ</h2><p class="section-sub">CONTACT</p><p>ご意見・ご質問などは、下記の連絡先からお寄せください。</p><p>お問い合わせ先は公開前に設定してください。</p></div></div>
+</main>
+<footer><p>田中まさかず 公式ホームページ</p><p>© TANAKA MASAKAZU</p></footer>
 <script>
 (async function () {
   const container = document.getElementById('note-articles');
@@ -75,6 +99,5 @@ section{max-width:1160px;margin:auto;padding:108px 38px;scroll-margin-top:80px}.
   }
 })();
 </script>
-</body></html>
-
-
+</body>
+</html>

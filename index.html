@@ -77,6 +77,37 @@ p, li {
   .hero-name-main {
     font-size: clamp(48px, 11vw, 76px) !important;
   }
+}
+/* 写真を大きな縦長バストアップに */
+.hero-top {
+  grid-template-columns: 1fr 1.1fr;
+  gap: 30px;
+}
+
+.hero-photo {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 4 / 5;
+  object-fit: cover;
+  object-position: center 20%;
+  border-radius: 18px;
+}
+
+/* スマートフォン用 */
+@media (max-width: 700px) {
+  .hero-top {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+
+  .hero-photo {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 4 / 5;
+    max-width: 440px;
+    object-fit: cover;
+    object-position: center 20%;
+  }
 }</style>
 </head>
 <body>

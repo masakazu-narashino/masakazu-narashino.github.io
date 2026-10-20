@@ -1,66 +1,8 @@
-import json
-import re
-import urllib.request
-import xml.etree.ElementTree as ET
-from datetime import datetime
-from email.utils import parsedate_to_datetime
-from html import unescape
-from html.parser import HTMLParser
-from pathlib import Path
-from urllib.parse import urlparse
-
-RSS_URL = 'https://note.com/masakazu_tanaka/rss'
-OUT = Path(__file__).with_name('note_articles.json')
-HEADERS = {'User-Agent': 'Mozilla/5.0 (compatible; PersonalSiteFeedUpdater/1.0)'}
-
-class MetaImageParser(HTMLParser):
-    def __init__(self):
-        super().__init__()
-        self.image = ''
-
-    def handle_starttag(self, tag, attrs):
-        if tag.lower() != 'meta':
-            return
-        a = dict(attrs)
-        if a.get('property', '').lower() in ('og:image', 'og:image:url') or a.get('name', '').lower() == 'twitter:image':
-            candidate = unescape(a.get('content', '').strip())
-            if candidate.startswith('https://') and not self.image:
-                self.image = candidate
-
-def fetch(url):
-    req = urllib.request.Request(url, headers=HEADERS)
-    with urllib.request.urlopen(req, timeout=30) as response:
-        return response.read()
-
-def article_image(url):
-    try:
-        parser = MetaImageParser()
-        parser.feed(fetch(url).decode('utf-8', errors='replace'))
-        return parser.image
-    except Exception as exc:
-        print(f'Image lookup failed for {url}: {exc}')
-        return ''
-
-root = ET.fromstring(fetch(RSS_URL))
-items = []
-for item in root.findall('./channel/item')[:3]:
-    def val(tag):
-        node = item.find(tag)
-        return (node.text or '').strip() if node is not None else ''
-
-    title, link, pub_date = val('title'), val('link'), val('pubDate')
-    parsed_url = urlparse(link)
-    if not title or parsed_url.scheme != 'https' or parsed_url.hostname != 'note.com':
-        continue
-    try:
-        date = parsedate_to_datetime(pub_date).date().isoformat()
-    except (ValueError, TypeError, IndexError):
-        date = ''
-    image = article_image(link)
-    items.append({'title': title, 'url': link, 'date': date, 'image': image})
-
-if not items:
-    raise RuntimeError('RSSに記事が見つかりません。既存のデータを維持します。')
-OUT.write_text(json.dumps(items, ensure_ascii=False, indent=2) + '\n', encoding='utf-8')
-print(f'{len(items)} articles updated; {sum(bool(i["image"]) for i in items)} images found')
-
+[
+  {
+    "title": "はじまして「田中まさかず」",
+    "url": "https://note.com/masakazu_tanaka/n/n7696b92f545e",
+    "date": "2026-10-20",
+    "image": "https://assets.st-note.com/img/1792483948-SpPE83fGr1JzKk9BYoegshyb.png"
+  }
+]

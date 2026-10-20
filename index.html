@@ -27,13 +27,20 @@ section {max-width:1000px;margin:auto;padding:76px 24px;scroll-margin-top:70px}
 .cards {display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px}
 .card {padding:24px;background:var(--light);border-top:3px solid var(--blue)}
 .card h3 {margin-top:0;color:var(--navy)}
+.note-grid {display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:22px}
+.note-card {min-width:0;border:1px solid #dce7f1;border-radius:6px;overflow:hidden;background:#fff}
+.note-card a {display:block;height:100%}
+.note-card img {display:block;width:100%;aspect-ratio:16/9;object-fit:cover;background:#eef7ff}
+.note-card-body {padding:15px 17px 20px}
+.note-card h3 {font-size:16px;line-height:1.6;color:var(--navy);margin:7px 0 0}
+.note-card:hover {box-shadow:0 5px 20px #12385d18;transform:translateY(-2px);transition:.2s}
 .news-item {padding:18px 0;border-bottom:1px solid #dce7f1}
 .news-item time {display:block;color:var(--blue);font-size:13px}
 .news-item a:hover {color:var(--blue);text-decoration:underline}
 .contact {background:var(--light);max-width:none;text-align:center}
 .contact-inner {max-width:800px;margin:auto;padding:0 24px}
 footer {padding:26px 20px;text-align:center;background:var(--navy);color:white;font-size:12px}
-@media(max-width:700px){nav{align-items:flex-start;flex-direction:column;gap:8px;padding:12px 18px}.menu{gap:8px 16px}.hero-inner{grid-template-columns:1fr;padding:36px 20px;gap:24px}.hero-photo{max-height:430px;width:min(100%,420px);margin:auto}section{padding:54px 20px}.cards{grid-template-columns:1fr}}
+@media(max-width:700px){nav{align-items:flex-start;flex-direction:column;gap:8px;padding:12px 18px}.menu{gap:8px 16px}.hero-inner{grid-template-columns:1fr;padding:36px 20px;gap:24px}.hero-photo{max-height:430px;width:min(100%,420px);margin:auto}section{padding:54px 20px}.cards{grid-template-columns:1fr}.note-grid{grid-template-columns:1fr}}
 </style>
 </head>
 <body>
@@ -56,23 +63,37 @@ footer {padding:26px 20px;text-align:center;background:var(--navy);color:white;f
     const articles = await response.json();
     if (!Array.isArray(articles) || articles.length === 0) throw new Error('No articles');
     container.replaceChildren();
-    for (const article of articles.slice(0,3)) {
-      if (!article.url || !article.url.startsWith('https://note.com/')) continue;
-      const wrapper = document.createElement('article');
-      wrapper.className = 'news-item';
-      const date = document.createElement('time');
-      date.textContent = article.date || 'note';
-      if (article.date) date.dateTime = article.date;
+    const grid = document.createElement('div');
+    grid.className = 'note-grid';
+    for (const article of articles.slice(0, 3)) {
+      if (typeof article.url !== 'string' || !article.url.startsWith('https://note.com/')) continue;
+      const card = document.createElement('article');
+      card.className = 'note-card';
       const link = document.createElement('a');
       link.href = article.url;
       link.target = '_blank';
       link.rel = 'noopener noreferrer';
-      const heading = document.createElement('strong');
-      heading.textContent = article.title || 'noteの記事を読む';
-      link.appendChild(heading);
-      wrapper.append(date,link);
-      container.appendChild(wrapper);
+      if (typeof article.image === 'string' && /^https:\/\//.test(article.image)) {
+        const img = document.createElement('img');
+        img.src = article.image;
+        img.alt = article.title || 'noteの記事の見出し画像';
+        img.loading = 'lazy';
+        link.appendChild(img);
+      }
+      const body = document.createElement('div');
+      body.className = 'note-card-body';
+      const date = document.createElement('time');
+      date.textContent = article.date || 'note';
+      if (article.date) date.dateTime = article.date;
+      const title = document.createElement('h3');
+      title.textContent = article.title || 'noteの記事を読む';
+      body.append(date, title);
+      link.appendChild(body);
+      card.appendChild(link);
+      grid.appendChild(card);
     }
+    if (!grid.children.length) throw new Error('No valid articles');
+    container.appendChild(grid);
   } catch (error) {
     container.textContent = '最新記事を表示できませんでした。下のボタンからnoteをご覧ください。';
   }
@@ -80,3 +101,4 @@ footer {padding:26px 20px;text-align:center;background:var(--navy);color:white;f
 </script>
 </body>
 </html>
+

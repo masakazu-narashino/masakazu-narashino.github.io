@@ -126,6 +126,28 @@ p, li {
     height: 440px;
     max-width: 440px;
   }
+}
+/* 写真を上へ移動し、上下のバランスを調整 */
+.hero-photo {
+  transform: translateY(-45px);
+  object-position: center 35%;
+}
+
+/* 写真の上下に余裕を持たせる */
+.hero-inner {
+  padding-bottom: 65px;
+}
+
+/* スマートフォン */
+@media (max-width: 700px) {
+  .hero-photo {
+    transform: translateY(0);
+    object-position: center 35%;
+  }
+
+  .hero-inner {
+    padding-bottom: 35px;
+  }
 }</style>
 </head>
 <body>

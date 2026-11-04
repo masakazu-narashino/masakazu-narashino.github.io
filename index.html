@@ -72,6 +72,36 @@ nav a,.menu a,.button {font-weight:800}
   .hero-photo {max-width:440px;margin:auto}
 }
 @media(max-width:370px) {.hero-name {font-size:11vw}}
+
+/* プロフィール写真・活動歴 */
+.profile-gallery {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 22px;
+  margin: 34px 0 12px;
+}
+.profile-gallery figure {
+  margin: 0;
+  min-width: 0;
+}
+.profile-gallery img {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  display: block;
+  border-radius: 14px;
+}
+.profile-gallery figcaption {
+  font-size: 15px;
+  line-height: 1.7;
+  font-weight: 700;
+  margin-top: 12px;
+}
+@media (max-width: 700px) {
+  .profile-gallery { grid-template-columns: 1fr; gap: 28px; }
+  .profile-gallery img { aspect-ratio: 4 / 3; }
+}
+
 </style>
 <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@500;600;700;800;900&display=swap" rel="stylesheet">
 
@@ -102,7 +132,18 @@ nav a,.menu a,.button {font-weight:800}
   </div>
 </div>
 
-<section id="profile"><h2 class="section-title">プロフィール</h2><p class="section-sub">PROFILE</p><h3>田中まさかず</h3><p>習志野市立藤崎小学校 出身<br>習志野市立第五中学校 出身<br>産業能率大学 卒業（学士〈マネジメント〉）<br>衆議院議員 小林鷹之 元公設秘書<br>国会議員政策担当秘書任用資格保有</p><p>これまでの経験を生かし、習志野のまちづくりや行政のあり方について考え、発信していきます。</p></section>
+<section id="profile">
+<h2 class="section-title">プロフィール</h2>
+<p class="section-sub">PROFILE</p>
+<h3>田中まさかず</h3>
+<p>習志野市立藤崎小学校 出身<br>習志野市立第五中学校 出身<br>産業能率大学 卒業（学士〈マネジメント〉）<br>小林鷹之（自由民主党政務調査会長）の秘書として10年間勤務<br>国会議員政策担当秘書任用資格保有</p>
+<p>これまでの経験を生かし、習志野のまちづくりや行政のあり方について考え、発信していきます。</p>
+<div class="profile-gallery">
+  <figure><img src="profile-mikoshi.png" alt="二宮神社の神輿渡御に参加する様子" loading="lazy"><figcaption>二宮神社で神輿渡御</figcaption></figure>
+  <figure><img src="profile-dj.png" alt="市内のDJイベントで子どもたちにDJを教える様子" loading="lazy"><figcaption>市内でのDJイベントに講師として出演</figcaption></figure>
+  <figure><img src="profile-secretary.jpg" alt="小林鷹之氏と並ぶ写真" loading="lazy"><figcaption>小林鷹之（自由民主党政務調査会長）の秘書として10年間勤務</figcaption></figure>
+</div>
+</section>
 <section id="vision" style="background:#f5f9fd;max-width:none"><div style="max-width:952px;margin:auto"><h2 class="section-title">ビジョン</h2><p class="section-sub">VISION</p><p>大きな言葉だけではなく、日々の暮らしに根ざした課題から、習志野の未来を考える。</p><p>地域の声とデータの両方を大切にし、具体的な提案につなげていきます。</p></div></section>
 <section id="policy"><h2 class="section-title">政策</h2><p class="section-sub">POLICY</p><div class="cards"><article class="card"><h3>01　納得できる行政運営</h3><p>データと費用対効果を踏まえ、政策を検証する行政運営を考えます。</p></article><article class="card"><h3>02　公共施設の再生</h3><p>将来の人口や財政を見据え、公共施設の維持管理と再編を考えます。</p></article><article class="card"><h3>03　災害に強いまち</h3><p>地域の防災力と、災害に備えるまちづくりについて考えます。</p></article><article class="card"><h3>04　緑と暮らしやすさ</h3><p>緑陰や都市機能の充実を通じ、日々の暮らしやすさを考えます。</p></article><article class="card"><h3>05　行政のデジタル化</h3><p>デジタル技術を活用し、利便性と行政サービスの向上を目指します。</p></article><article class="card"><h3>06　これからのまちづくり</h3><p>人口や地域の特性を踏まえ、持続可能な都市のあり方を考えます。</p></article></div></section>
 <section id="news"><h2 class="section-title">活動報告</h2><p class="section-sub">NEWS &amp; ACTIVITIES</p><div id="note-articles" aria-live="polite"><p>最新記事を読み込み中です。</p></div><p><a class="button" href="https://note.com/masakazu_tanaka" target="_blank" rel="noopener noreferrer">noteですべての記事を見る →</a></p></section>

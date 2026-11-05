@@ -168,7 +168,169 @@ nav a,.menu a,.button {font-weight:800}
   </div>
 </section>
 
-<section id="policy"><h2 class="section-title">政策</h2><p class="section-sub">POLICY</p><div class="cards"><article class="card"><h3>01　納得できる行政運営</h3><p>データと費用対効果を踏まえ、政策を検証する行政運営を考えます。</p></article><article class="card"><h3>02　公共施設の再生</h3><p>将来の人口や財政を見据え、公共施設の維持管理と再編を考えます。</p></article><article class="card"><h3>03　災害に強いまち</h3><p>地域の防災力と、災害に備えるまちづくりについて考えます。</p></article><article class="card"><h3>04　緑と暮らしやすさ</h3><p>緑陰や都市機能の充実を通じ、日々の暮らしやすさを考えます。</p></article><article class="card"><h3>05　行政のデジタル化</h3><p>デジタル技術を活用し、利便性と行政サービスの向上を目指します。</p></article><article class="card"><h3>06　これからのまちづくり</h3><p>人口や地域の特性を踏まえ、持続可能な都市のあり方を考えます。</p></article></div></section>
+<section id="policy">
+<section id="policy">
+  <h2 class="section-title">政策</h2>
+  <p class="section-sub">POLICY</p>
+
+  <style>
+    #policy .policy-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 18px;
+      align-items: stretch;
+      margin-top: 28px;
+    }
+    #policy .policy-card {
+      background: #fff;
+      border: 1px solid #c8ddef;
+      border-radius: 16px;
+      padding: 24px 20px;
+      box-shadow: 0 4px 16px rgba(25,65,105,.06);
+      min-width: 0;
+    }
+    #policy .policy-number {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 42px;
+      height: 42px;
+      border-radius: 50%;
+      background: #14548a;
+      color: white;
+      font-size: 23px;
+      font-weight: 800;
+      margin-bottom: 12px;
+    }
+    #policy .policy-card h3 {
+      color: #164d7c;
+      font-size: 21px;
+      line-height: 1.5;
+      margin: 0 0 22px;
+    }
+    #policy .policy-item {
+      border-top: 1px solid #e5edf4;
+      padding: 17px 0;
+    }
+    #policy .policy-item h4 {
+      font-size: 16px;
+      line-height: 1.5;
+      color: #164d7c;
+      margin: 0 0 7px;
+    }
+    #policy .policy-item p {
+      font-size: 14px;
+      line-height: 1.85;
+      color: #34475a;
+      margin: 0;
+    }
+    @media (max-width: 900px) {
+      #policy .policy-grid {
+        grid-template-columns: 1fr;
+      }
+      #policy .policy-card {
+        padding: 24px;
+      }
+    }
+  </style>
+
+  <div class="policy-grid">
+
+    <!-- 政策1 -->
+    <article class="policy-card">
+      <span class="policy-number">1</span>
+      <h3>財政の見直しと<br>市民サービスの向上</h3>
+
+      <div class="policy-item">
+        <h4>既存事業の再点検と選択・集中</h4>
+        <p>人口減少社会を見据え、事業の必要性と効果を検証し、限られた財源を必要なサービスに重点配分します。</p>
+      </div>
+
+      <div class="policy-item">
+        <h4>公共施設の統合・複合化と学校施設の再編</h4>
+        <p>公共施設の統合・複合化により維持管理費を抑制します。小中一貫教育の充実と、小・中学校の一体的な施設整備を検討します。</p>
+      </div>
+
+      <div class="policy-item">
+        <h4>近隣市との広域連携の推進</h4>
+        <p>千葉市・船橋市・八千代市などとの施設の相互利用や業務の共同化を検討し、利便性の向上と行政コストの抑制を図ります。</p>
+      </div>
+
+      <div class="policy-item">
+        <h4>自宅で手続きが完結する市役所へ</h4>
+        <p>行政手続きのオンライン化と庁内の情報連携を進めます。窓口では、デジタルに不慣れな方への支援や、対面での相談対応を充実させます。</p>
+      </div>
+
+      <div class="policy-item">
+        <h4>申請を待つ行政から、支援を届ける行政へ</h4>
+        <p>対象となる方に必要な支援を市からお知らせする仕組みを整え、申請の簡素化と、可能な手続きの申請不要化を進めます。</p>
+      </div>
+    </article>
+
+    <!-- 政策2 -->
+    <article class="policy-card">
+      <span class="policy-number">2</span>
+      <h3>暮らしを守る<br>インフラの強靱化</h3>
+
+      <div class="policy-item">
+        <h4>都市計画道路の早期整備と南北交通の改善</h4>
+        <p>都市計画道路の早期開通と踏切による交通分断の改善を進め、市内を円滑に移動できる道路ネットワークの形成を目指します。</p>
+      </div>
+
+      <div class="policy-item">
+        <h4>上下水道の老朽化対策と浸水対策の強化</h4>
+        <p>老朽化した上下水道の計画的な更新と予防保全を進めます。想定を超える豪雨も見据え、道路の冠水や住宅の浸水への対策を再検証します。</p>
+      </div>
+
+      <div class="policy-item">
+        <h4>危険な空き家の解消</h4>
+        <p>倒壊のおそれがある空き家の適切な管理と除却を促進します。解体後の土地にかかる税負担の増加を緩和する措置を検討します。</p>
+      </div>
+
+      <div class="policy-item">
+        <h4>誰もが安心して歩ける歩道へ</h4>
+        <p>歩道上にある側溝のフタのガタつきや・継ぎ目を改善し、ベビーカーでも通行しやすい、歩道整備を進めます。</p>
+      </div>
+
+      <div class="policy-item">
+        <h4>車がなくても暮らせる交通環境の整備</h4>
+        <p>コミュニティバスの路線・運行の充実など、地域の移動需要に応じた公共交通の利便性向上を図ります。</p>
+      </div>
+    </article>
+
+    <!-- 政策3 -->
+    <article class="policy-card">
+      <span class="policy-number">3</span>
+      <h3>地域で稼ぎ、<br>経済力のあるまちへ</h3>
+
+      <div class="policy-item">
+        <h4>経営の視点を生かした民間活力の導入</h4>
+        <p>Park-PFIなどの公民連携を進め、民間の資金やノウハウを活用することで、公共空間の魅力向上と財政負担の抑制を図ります。</p>
+      </div>
+
+      <div class="policy-item">
+        <h4>地域の価値を高める土地利用の推進</h4>
+        <p>未整備地区における土地区画整理事業などを通じて、道路や生活基盤を整え、土地の有効活用と地域の価値向上を図ります。</p>
+      </div>
+
+      <div class="policy-item">
+        <h4>緑と調和した美しい街並みの形成</h4>
+        <p>緑化を推進するとともに、景観に関するルールの整備や地区計画の対象区域の拡充を検討し、地域の特性に合った秩序あるまちづくりを進めます。</p>
+      </div>
+
+      <div class="policy-item">
+        <h4>茜浜・芝園地区の可能性を生かす土地利用の見直し</h4>
+        <p>既存の産業との調和や防災面、公共サービスへの影響を踏まえ、用途地域の見直しを検討します。住宅などの新たな立地による税源の確保と、水辺を生かした憩いの空間づくりを目指します。</p>
+      </div>
+
+      <div class="policy-item">
+        <h4>地域内でお金が循環する経済の実現</h4>
+        <p>市内事業者の経営・販路開拓・事業承継を支援し、市内での調達や消費を促すことで、地域の所得と雇用を育てます。</p>
+      </div>
+    </article>
+
+  </div>
+</section>
 <section id="news"><h2 class="section-title">活動報告</h2><p class="section-sub">NEWS &amp; ACTIVITIES</p><div id="note-articles" aria-live="polite"><p>最新記事を読み込み中です。</p></div><p><a class="button" href="https://note.com/masakazu_tanaka" target="_blank" rel="noopener noreferrer">noteですべての記事を見る →</a></p></section>
 <div class="contact" id="contact"><div class="contact-inner"><h2 class="section-title">お問い合わせ</h2><p class="section-sub">CONTACT</p><p>ご意見・ご質問などは、メールでお寄せください。</p><p><a class="mail-link" href="mailto:masakazu.city@gmail.com?subject=%E3%83%9B%E3%83%BC%E3%83%A0%E3%83%9A%E3%83%BC%E3%82%B8%E3%81%8B%E3%82%89%E3%81%AE%E3%81%8A%E5%95%8F%E3%81%84%E5%90%88%E3%82%8F%E3%81%9B">✉　masakazu.city@gmail.com</a></p></div></div>
 </main>

@@ -232,6 +232,43 @@ nav a,.menu a,.button {font-weight:800}
     }
   </style>
 
+  <!-- ビジョン以下の文字を読みやすく調整 -->
+  <style>
+    #vision .section-title, #profile .section-title,
+    #policy .section-title, #news .section-title,
+    #contact .section-title { font-size: 34px; line-height: 1.4; }
+
+    #vision h3 { font-size: 26px; line-height: 1.55; }
+    #vision p:not(.section-sub) { font-size: 18px; line-height: 2; }
+
+    #profile h3 { font-size: 25px; line-height: 1.5; }
+    #profile p:not(.section-sub) { font-size: 18px; line-height: 1.95; }
+    #profile .profile-gallery figcaption { font-size: 16px; line-height: 1.7; }
+
+    #policy .policy-card h3 { font-size: 23px; line-height: 1.5; }
+    #policy .policy-item h4 { font-size: 19px; line-height: 1.6; }
+    #policy .policy-item p { font-size: 17px; line-height: 1.9; }
+
+    #news .note-card h3 { font-size: 18px; line-height: 1.65; }
+    #news .news-item { font-size: 17px; line-height: 1.8; }
+    #news > p:not(.section-sub) { font-size: 17px; }
+    #contact .contact-inner > p:not(.section-sub) { font-size: 18px; line-height: 1.8; }
+    footer { font-size: 14px; line-height: 1.8; }
+
+    @media (max-width: 700px) {
+      #vision .section-title, #profile .section-title,
+      #policy .section-title, #news .section-title,
+      #contact .section-title { font-size: 29px; }
+      #vision h3 { font-size: 23px; }
+      #vision p:not(.section-sub), #profile p:not(.section-sub) { font-size: 17px; }
+      #policy .policy-card h3 { font-size: 22px; }
+      #policy .policy-item h4 { font-size: 18px; }
+      #policy .policy-item p { font-size: 16px; }
+      #news .note-card h3 { font-size: 17px; }
+      #contact .contact-inner > p:not(.section-sub) { font-size: 17px; }
+    }
+  </style>
+
   <div class="policy-grid">
 
     <!-- 政策1 -->

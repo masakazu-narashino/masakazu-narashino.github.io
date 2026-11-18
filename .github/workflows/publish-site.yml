@@ -1,0 +1,37 @@
+name: Prepare the official site
+
+on:
+  push:
+    branches: [main]
+    paths: ['.github/workflows/publish-site.yml']
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  prepare:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/checkout@v4
+        with:
+          repository: masakazu-narashino/masakazu-narashino.github.io
+          ref: 5382ebf06ee9c6ecf464dbda5abbd86ce16ecadb
+          path: source-snapshot
+          persist-credentials: false
+      - name: Copy only the current public site files
+        shell: bash
+        run: |
+          set -euo pipefail
+          files=(index.html narashino-next.png portrait.jpg profile-dj.png profile-mikoshi.png profile-secretary.jpg signature.png update_note.py)
+          for file in "${files[@]}"; do
+            cp "source-snapshot/$file" "$file"
+            cmp "source-snapshot/$file" "$file"
+          done
+          python3 update_note.py
+          grep -Fq 'https://note.com/masakazu_tanaka' index.html
+          if grep -Fq '/blog/' index.html; then exit 1; fi
+          git add -- "${files[@]}" note_articles.json
+          git -c user.name='github-actions[bot]' -c user.email='41898282+github-actions[bot]@users.noreply.github.com' commit -m 'Add the official website and note integration'
+          git push origin HEAD:main

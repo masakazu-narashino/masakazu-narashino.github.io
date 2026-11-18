@@ -1,0 +1,562 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="田中まさかずの公式ホームページ。習志野市での活動、プロフィール、政策、活動報告をご紹介します。">
+<title>田中まさかず｜習志野市｜公式ホームページ</title>
+<style>
+:root {--blue:#579EAE;--navy:#174F64;--light:#EDF7F9;--text:#284550}
+* {box-sizing:border-box}
+html {scroll-behavior:smooth}
+body {margin:0;color:var(--text);line-height:1.9}
+a {color:inherit;text-decoration:none}
+header {position:sticky;top:0;z-index:10;background:rgba(255,255,255,.96);border-bottom:1px solid #D9E9ED}
+nav {max-width:1100px;margin:auto;padding:14px 24px;display:flex;align-items:center;justify-content:space-between;gap:20px}
+.logo {color:var(--navy);font-weight:800;font-size:20px;white-space:nowrap}
+.menu {display:flex;flex-wrap:wrap;gap:20px;font-size:13px}
+section {max-width:1000px;margin:auto;padding:76px 24px;scroll-margin-top:85px}
+.section-title {margin:0 0 8px;color:var(--navy);font-size:30px;letter-spacing:.06em}
+.section-sub {margin:0 0 28px;color:var(--blue);font-size:12px;letter-spacing:.16em}
+.cards {display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px}
+.card {padding:24px;background:var(--light);border-top:3px solid var(--blue)}
+.card h3 {margin-top:0;color:var(--navy)}
+.note-grid {display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:22px}
+.note-card {min-width:0;border:1px solid #D6E8ED;border-radius:6px;overflow:hidden;background:#fff}
+.note-card a {display:block;height:100%}
+.note-card img {display:block;width:100%;aspect-ratio:16/9;object-fit:cover;background:#EDF7F9}
+.note-card-body {padding:15px 17px 20px}
+.note-card h3 {font-size:16px;line-height:1.6;color:var(--navy);margin:7px 0 0}
+.note-card:hover {box-shadow:0 5px 20px #174F6418;transform:translateY(-2px);transition:.2s}
+.news-item {padding:18px 0;border-bottom:1px solid #D6E8ED}
+.news-item time {display:block;color:var(--blue);font-size:13px}
+.news-item a:hover {color:var(--blue);text-decoration:underline}
+.contact {background:var(--light);max-width:none;text-align:center}
+.contact-inner {max-width:800px;margin:auto;padding:58px 24px}
+.mail-link {display:inline-flex;align-items:center;justify-content:center;gap:10px;margin-top:12px;padding:13px 24px;border-radius:6px;background:var(--blue);color:#fff;font-weight:800;overflow-wrap:anywhere}
+.mail-link:hover {background:var(--navy)}
+footer {padding:26px 20px;text-align:center;background:var(--navy);color:white;font-size:12px}
+
+@media(max-width:700px) {section {padding:54px 20px} .cards {grid-template-columns:1fr} .note-grid {grid-template-columns:1fr}}
+/* 共通フォント */
+body {font-family:"Noto Sans JP",sans-serif;font-weight:600}
+h1,h2,h3,.logo,.section-title {font-weight:900}
+nav a,.menu a,.button {font-weight:800}
+
+/* メインビジュアル */
+.hero {background:linear-gradient(145deg,#F0F9FB 5%,#C5E4EA 62%,#A4D2DD);overflow:hidden}
+.hero-inner {max-width:1200px;margin:auto;padding:65px 24px}
+.hero-top {display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.1fr);align-items:center;gap:30px}
+.hero-intro {min-width:0;padding:15px 0}
+.city-label {display:inline-block;margin:0 0 16px;padding:4px 15px;background:var(--navy);color:white;border-radius:99px;font-weight:700;font-size:13px;letter-spacing:.09em}
+.eyebrow {color:var(--blue);font-size:13px;letter-spacing:.16em;font-weight:800}
+.hero-name {color:var(--navy);font-size:clamp(54px,6.5vw,104px);font-weight:900;line-height:1.05;letter-spacing:-.05em;margin:20px 0 28px;text-align:left;white-space:normal;overflow-wrap:anywhere;font-feature-settings:"palt" 1}
+.hero-name small {display:block;font-size:15px;letter-spacing:.15em;line-height:1.4;margin-bottom:14px}
+.hero-name span {display:block;letter-spacing:-.08em}
+.hero-intro .catch {font-size:clamp(30px,3.5vw,52px);font-weight:900;line-height:1.35;color:var(--navy);margin:16px 0}
+.hero-intro .lead {font-size:clamp(14px,1.5vw,17px)}
+.button {display:inline-block;margin-top:18px;padding:10px 25px;background:var(--blue);color:white;border-radius:5px;font-weight:800}
+.button:hover {background:var(--navy)}
+/* 縦長3:4、枠内で自然にトリミング */
+.hero-photo {display:block;width:100%;height:auto;aspect-ratio:3/4;object-fit:cover;object-position:center 35%;border-radius:18px;box-shadow:0 18px 40px #174F6422}
+
+@media(max-width:700px) {
+  nav {align-items:flex-start;flex-direction:column;gap:8px;padding:12px 18px}
+  .menu {gap:8px 16px}
+  .hero-inner {padding:30px 16px 35px}
+  .hero-top {grid-template-columns:minmax(0,1fr);gap:24px}
+  .hero-intro {padding:0}
+  .hero-name {font-size:clamp(48px,11vw,76px)}
+  .hero-name small {font-size:11px;letter-spacing:.12em}
+  .hero-intro .catch {font-size:clamp(27px,7vw,40px);margin:10px 0}
+  .hero-photo {max-width:440px;margin:auto}
+}
+@media(max-width:370px) {.hero-name {font-size:11vw}}
+
+/* プロフィール写真・活動歴 */
+.profile-gallery {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 22px;
+  margin: 34px 0 12px;
+}
+.profile-gallery figure {
+  margin: 0;
+  min-width: 0;
+}
+.profile-gallery img {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  display: block;
+  border-radius: 14px;
+}
+.profile-gallery figcaption {
+  font-size: 15px;
+  line-height: 1.7;
+  font-weight: 700;
+  margin-top: 12px;
+}
+@media (max-width: 700px) {
+  .profile-gallery { grid-template-columns: 1fr; gap: 28px; }
+  .profile-gallery img { aspect-ratio: 4 / 3; }
+}
+
+</style>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@500;600;700;800;900&display=swap" rel="stylesheet">
+
+
+</head>
+<body>
+<header><nav><a class="logo" href="#home">田中まさかず</a><div class="menu"><a href="#profile">プロフィール</a><a href="#vision">ビジョン</a><a href="#policy">政策</a><a href="https://note.com/masakazu_tanaka">ブログ</a><a href="#contact">お問い合わせ</a></div></nav></header>
+<main>
+
+<div class="hero" id="home">
+  <div class="hero-inner">
+    <div class="hero-top">
+      <div class="hero-intro">
+        <p class="city-label">千葉県・習志野市</p>
+        <div class="eyebrow">TANAKA MASAKAZU OFFICIAL WEBSITE</div>
+
+        <h1 class="hero-name hero-name-main">
+          <small>NARASHINO CITY</small>
+          田中<span>まさかず</span>
+        </h1>
+
+        <p class="catch">強く、しなやかな<br>習志野をつくる。</p>
+        <p class="lead">未来の子供達の目線から、まちの未来を考える。</p>
+        <a class="button" href="#profile">プロフィールを見る →</a>
+      </div>
+      <img class="hero-photo" src="portrait.jpg" alt="田中まさかずのプロフィール写真">
+    </div>
+  </div>
+</div>
+  
+<!-- NARASHINO NEXT ロゴ -->
+<div style="
+  max-width:1000px;
+  margin:0 auto;
+  padding:45px 24px 65px;
+  text-align:center;
+">
+  <img
+    src="narashino-next.png"
+    alt="NARASHINO NEXT 強く、しなやかな習志野へ。"
+    style="
+      display:block;
+      width:100%;
+      max-width:700px;
+      height:auto;
+      margin:0 auto;
+    "
+  >
+</div>
+
+<section id="vision" style="background:#EDF7F9;max-width:none">
+  <div style="max-width:952px;margin:auto">
+    <h2 class="section-title">ビジョン</h2>
+    <p class="section-sub">VISION</p>
+
+    <h3>未来の子どもたちに、強い習志野を残す。</h3>
+
+    <p>今、習志野市は大きな分岐点に立っていると考えています。</p>
+
+    <p>これから本格化する人口減少社会に備え、今こそ将来を見据えた改革に取り組まなければなりません。</p>
+
+    <p>高度経済成長期につくられた行政運営の仕組みを見直し、持続可能で効率的な行政へと転換する。既存事業の徹底した検証や公共施設の再編・統合を進め、行政の固定費を抑制する。そして、そこで生み出した財源を、防災・インフラの強靱化、子育て支援、地域経済の活性化といった、まちの未来を支える分野へ重点的に投資していく。</p>
+
+    <p>市域がコンパクトで、人口密度の高い習志野市には、効率的で質の高い行政サービスを実現できる大きな可能性があります。</p>
+
+    <p><strong>削るべきものは削り、守るべきものは守る。そして、未来のために必要な投資を惜しまない。</strong></p>
+
+    <p>次の世代に負担を先送りするのではなく、未来の子どもたちに、強く、しなやかで、活力ある習志野市を引き継いでいきたい。</p>
+    
+<p><strong>その決意を胸に、私は立ち上がりました。</strong></p>
+
+<div style="text-align:right; margin-top:18px;">
+  <img
+    src="signature.png"
+    alt="田中まさかず 筆文字署名"
+    style="display:inline-block; width:260px; max-width:75%; height:auto;"
+  >
+</div>
+
+  </div>
+</section>
+
+<section id="profile">
+<h2 class="section-title">プロフィール</h2>
+<p class="section-sub">PROFILE</p>
+<h3>田中まさかず</h3>
+<p>1981年（昭和56年）11月1日生まれ<br>習志野市立藤崎小学校・第五中学校 卒業<br>昭和第一高等学校・産業能率大学 卒業<br>自由民主党政調会長 小林鷹之 公設秘書を経て、生まれ育った習志野で政治活動中<br>国会議員政策担当秘書任用資格保有<br>趣味：街歩き・ハイキング・音楽DJ 
+ 　好きな食べ物：かいざんラーメン・ちば海苔</p>
+
+<p>習志野市のまちづくりや行政のあり方について考え、発信していきます。</p>
+<div class="profile-gallery">
+  <figure><img src="profile-mikoshi.png" alt="二宮神社の神輿渡御に参加する様子" loading="lazy"><figcaption>二宮神社で神輿渡御</figcaption></figure>
+  <figure><img src="profile-dj.png" alt="市内のDJイベントで子どもたちにDJを教える様子" loading="lazy"><figcaption>市内でDJ体験イベントを共催</figcaption></figure>
+  <figure><img src="profile-secretary.jpg" alt="小林鷹之氏と並ぶ写真" loading="lazy"><figcaption>小林鷹之 自民党政調会長の秘書として</figcaption></figure>
+</div>
+</section>
+  </div>
+</section>
+
+<!-- NARASHINO NEXT ロゴ -->
+<div style="
+  max-width:1000px;
+  margin:0 auto;
+  padding:45px 24px 65px;
+  text-align:center;
+">
+  <img
+    src="narashino-next.png"
+    alt="NARASHINO NEXT 強く、しなやかな習志野へ。"
+    style="
+      display:block;
+      width:100%;
+      max-width:700px;
+      height:auto;
+      margin:0 auto;
+    "
+  >
+</div>
+
+<section id="policy">
+  <h2 class="section-title">政策</h2>
+  <p class="section-sub">POLICY</p>
+
+  <style>
+    #policy .policy-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 18px;
+      align-items: start;
+      margin-top: 28px;
+    }
+    #policy .policy-card {
+      background: #fff;
+      border: 1px solid #BCDCE4;
+      border-radius: 16px;
+      padding: 24px 20px;
+      box-shadow: 0 4px 16px rgba(23,79,100,.06);
+      min-width: 0;
+    }
+    
+#policy .policy-number {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 110px;
+  height: 110px;
+  border-radius: 50%;
+  background: #174F64;
+  color: #ffffff;
+  -webkit-text-fill-color: #ffffff;
+  font-family: "Arial Black", Impact, sans-serif;
+  font-size: 82px;
+  font-weight: 900;
+  font-style: italic;
+  line-height: 1;
+  letter-spacing: -0.06em;
+  padding-right: 10px;
+  margin: 0 0 22px;
+  border: none;
+  box-shadow: none;
+  transform: none;
+  filter: none;
+}
+
+    }
+    #policy .policy-card h3 {
+      color: #397F96;
+      font-size: 21px;
+      line-height: 1.5;
+      margin: 0 0 22px;
+    }
+    #policy .policy-item {
+      border-top: 1px solid #DCEBF0;
+      padding: 17px 0;
+    }
+    #policy .policy-item h4 {
+      font-size: 16px;
+      line-height: 1.5;
+      color: #397F96;
+      margin: 0 0 7px;
+    }
+    #policy .policy-item p {
+      font-size: 14px;
+      line-height: 1.85;
+      color: #385763;
+      margin: 0;
+    }
+    @media (max-width: 900px) {
+      #policy .policy-grid {
+        grid-template-columns: 1fr;
+      }
+      #policy .policy-card {
+        padding: 24px;
+      }
+    }
+  </style>
+
+  <!-- ビジョン以下の文字を読みやすく調整 -->
+  <style>
+    #vision .section-title, #profile .section-title,
+    #policy .section-title, #news .section-title,
+    #contact .section-title { font-size: 34px; line-height: 1.4; }
+
+    #vision h3 { font-size: 26px; line-height: 1.55; }
+    #vision p:not(.section-sub) { font-size: 18px; line-height: 2; }
+
+    #profile h3 { font-size: 25px; line-height: 1.5; }
+    #profile p:not(.section-sub) { font-size: 18px; line-height: 1.95; }
+    #profile .profile-gallery figcaption { font-size: 16px; line-height: 1.7; }
+
+    #policy .policy-card h3 { font-size: 23px; line-height: 1.5; }
+    #policy .policy-item h4 { font-size: 19px; line-height: 1.6; }
+    #policy .policy-item p { font-size: 17px; line-height: 1.9; }
+
+    #news .note-card h3 { font-size: 18px; line-height: 1.65; }
+    #news .news-item { font-size: 17px; line-height: 1.8; }
+    #news > p:not(.section-sub) { font-size: 17px; }
+    #contact .contact-inner > p:not(.section-sub) { font-size: 18px; line-height: 1.8; }
+    footer { font-size: 14px; line-height: 1.8; }
+
+    @media (max-width: 700px) {
+      #vision .section-title, #profile .section-title,
+      #policy .section-title, #news .section-title,
+      #contact .section-title { font-size: 29px; }
+      #vision h3 { font-size: 23px; }
+      #vision p:not(.section-sub), #profile p:not(.section-sub) { font-size: 17px; }
+      #policy .policy-card h3 { font-size: 22px; }
+      #policy .policy-item h4 { font-size: 18px; }
+      #policy .policy-item p { font-size: 16px; }
+      #news .note-card h3 { font-size: 17px; }
+      #contact .contact-inner > p:not(.section-sub) { font-size: 17px; }
+    }
+  </style>
+
+  <div class="policy-grid">
+
+    <!-- 政策1 -->
+    <article class="policy-card">
+      <span class="policy-number">1</span>
+      <h3>財政の見直しと<br>市民サービスの向上</h3>
+
+      <div class="policy-item">
+        <h4>既存事業の徹底検証と選択・集中による財政改革</h4>
+        <p>人口減少と少子高齢化が進む社会を見据え、既存の事業や補助金、行政サービスの再点検を行います。事業の必要性や費用対効果を検証し、効果の乏しい事業の縮小・廃止や、重複する事業の統合を進めます。また、財政負担を市民に分かりやすく公開し、行政運営の透明性を高めます。こうした歳出構造の改革によって生み出した財源を、老朽化するインフラの更新、子育て・教育、防災など、将来にわたって必要な分野へ重点的に再配分します。</p>
+      </div>
+
+      <div class="policy-item">
+        <h4>公共施設の統合・複合化と学校施設の再編</h4>
+        <p>公共施設の統合・複合化を推進し、維持管理費の抑制と施設の有効活用を図ります。特に市が保有する公共建築物の延床面積の約半分を占める小中学校について、施設の更新時期を迎える学校から、施設一体型の小中一貫校への再編可能性を検証します。</p>
+      </div>
+
+      <div class="policy-item">
+        <h4>近隣市・県との広域連携の推進</h4>
+        <p>近隣自治体や千葉県との広域連携を推進し、ごみ処理施設の共同利用、消防業務や下水処理の広域化、行政事務の共同化などを検討します。自治体間で施設や業務を効率的に分担することで、市民の利便性向上と行政コストの抑制を図ります。</p>
+      </div>
+
+      <div class="policy-item">
+        <h4>市役所に行かずに手続きが完結する行政DX</h4>
+        <p>行政手続きのオンライン化と行政情報の連携を進め、自宅から各種手続きが完結する仕組みを整えます。一方、窓口ではデジタルに不慣れな方への支援や、対面での相談対応を充実させ、誰もが利用しやすい行政サービスを目指します。</p>
+      </div>
+
+      <div class="policy-item">
+        <h4>「申請しないともらえない仕組み」から「必ず支援が届く仕組み」への転換</h4>
+        <p>支援の対象となる方に、市から必要な情報をお知らせするプッシュ型通知を推進します。あわせて、申請手続きの簡素化や、可能な制度から申請不要化を進め、支援の受け忘れや申請漏れを防ぐ仕組みを整えます。</p>
+      </div>
+    </article>
+
+    <!-- 政策2 -->
+    <article class="policy-card">
+      <span class="policy-number">2</span>
+      <h3>暮らしを守る<br>インフラの強靱化</h3>
+
+      <div class="policy-item">
+        <h4>都市計画道路の早期整備と市内南北間の交通アクセスの改善</h4>
+        <p>都市計画道路3・3・3号藤崎茜浜線（市役所通り～習志野警察署周辺）の早期整備を促進し、京成線の踏切によって分断されている市内南北間の交通アクセスの改善を図ります。また、千葉県と連携してその他の都市計画道路の整備も推進し、市内の移動を円滑にする道路ネットワークの形成を目指します。</p>
+      </div>
+
+      <div class="policy-item">
+        <h4>上下水道の老朽化対策と浸水対策の強化</h4>
+        <p>老朽化した上下水道の計画的な更新と予防保全を強化します。また、近年の集中豪雨や想定を超える降雨に備え、鷺沼放流幹線の整備に続く浸水対策の必要性を検証し、アンダーパスの道路冠水や住宅浸水の被害軽減に向けた対策を推進します。</p>
+      </div>
+
+      <div class="policy-item">
+        <h4>危険な空き家の解消と土地の有効活用</h4>
+        <p>倒壊のおそれがある空き家の適切な管理と除却を促進します。所有者への助言・指導や解体費用の支援に加え、解体後の土地にかかる固定資産税負担の増加を一定期間緩和する措置を検討します。また、空き家の流通・利活用を促進し、防災・防犯上のリスクを軽減するとともに、安全で良好な住環境の形成を目指します。</p>
+      </div>
+
+      <div class="policy-item">
+        <h4>歩きたくなる快適な歩道環境の整備</h4>
+        <p>市内の歩道について、路面の段差や凹凸、歩道幅員の不足などの課題を改善し、歩行者の安全性と快適性を高めます。誰もが安心して歩くことができ、日常の移動や散策が楽しくなるような、歩きたくなる歩道環境の整備を目指します。</p>
+      </div>
+
+      <div class="policy-item">
+        <h4>大学と連携した次世代交通の推進</h4>
+        <p>国家戦略特区制度の活用も視野に入れ、市内大学や民間事業者との連携を強化し、自動運転やAIオンデマンド交通（予約に応じて運行する乗合交通）など、次世代モビリティの実証・導入を検討します。地域の移動需要に応じた、持続可能で利便性の高い交通環境の実現を目指します。</p>
+      </div>
+    </article>
+
+    <!-- 政策3 -->
+    <article class="policy-card">
+      <span class="policy-number">3</span>
+      <h3>地域で稼ぎ、<br>経済力のあるまちへ</h3>
+
+      <div class="policy-item">
+        <h4>経営の視点を生かした民間活力の導入</h4>
+        <p>官民連携（Park-PFIなど）を推進し、民間の資金やノウハウを公共施設や公園の整備・運営に活用します。民間の創意工夫によって市民サービスの向上と新たな収入の確保を図り、維持管理コストと市の財政負担を抑制します。</p>
+      </div>
+
+      <div class="policy-item">
+        <h4>地域の価値を高める土地利用の推進</h4>
+        <p>都市基盤が未整備の地区において、土地区画整理事業などを活用し、道路や生活基盤の整備を進めます。あわせて、土地の有効活用を促進し、良好な住環境の形成と地域の資産価値向上を図ります。</p>
+      </div>
+
+      <div class="policy-item">
+        <h4>市有地の有効活用と新たな財源の創出</h4>
+        <p>未利用・低利用の市有地について、民間への貸付などを積極的に進めます。土地の持つ潜在的な価値を最大限に引き出し、新たな財源の確保と民間投資の誘導を通じて、地域経済の活性化と持続可能な財政運営につなげます。</p>
+      </div>
+
+      <div class="policy-item">
+        <h4>緑と調和した美しい街並みの形成</h4>
+        <p>緑化を推進するとともに、景観に関するルールの整備や地区計画の対象区域の拡充を検討します。地域の特性を生かした秩序ある土地利用を促進し、緑と調和した良好な街並みの形成を目指します。</p>
+      </div>
+
+      <div class="policy-item">
+        <h4>ウォーターフロントの可能性を生かす土地利用の見直し</h4>
+        <p>茜浜・芝園地区について、将来を見据えた土地利用のあり方を再検討し、必要に応じて用途地域の見直しを進めます。既存の産業活動との調和を図りながら、海辺という貴重な地域資源を生かし、人が集う魅力あるウォーターフロントの形成を目指します。</p>
+      </div>
+
+      <div class="policy-item">
+        <h4>新産業の創出と地域経済の活性化</h4>
+        <p>理工系大学が立地する地域の特性を生かし、地元企業との新産業の創出を推進します。地域で生み出された富が地域内で循環する仕組みをつくり、雇用と税収の拡大につなげます。将来的にはロボット技術の活用を広げ、「フィジカルAI先進都市」を目指すなど、習志野市ならではの強みを獲得します。</p>
+      </div>
+    </article>
+
+  </div>
+</section>
+
+<!-- NARASHINO NEXT ロゴ -->
+<div style="
+  max-width:1000px;
+  margin:0 auto;
+  padding:45px 24px 65px;
+  text-align:center;
+">
+  <img
+    src="narashino-next.png"
+    alt="NARASHINO NEXT 強く、しなやかな習志野へ。"
+    style="
+      display:block;
+      width:100%;
+      max-width:700px;
+      height:auto;
+      margin:0 auto;
+    "
+  >
+</div>
+
+<!-- 後援会入会案内 -->
+<section id="supporters" style="
+  max-width:none;
+  background:#EDF7F9;
+  text-align:center;
+">
+  <div style="max-width:850px;margin:0 auto;">
+    <h2 class="section-title">後援会入会のご案内</h2>
+    <p class="section-sub">SUPPORTERS</p>
+
+    <p style="font-size:18px;line-height:1.9;">
+      田中まさかず後援会への入会を希望される方は、
+      以下のフォームからお申し込みください。
+    </p>
+
+    <a
+      href="https://forms.gle/duhBZM5Pf99gwUAJ6"
+      target="_blank"
+      rel="noopener noreferrer"
+      style="
+        display:inline-block;
+        margin-top:20px;
+        padding:18px 36px;
+        background:#397F96;
+        color:#ffffff;
+        border-radius:8px;
+        font-size:19px;
+        font-weight:800;
+        text-decoration:none;
+      "
+    >
+      後援会入会フォームはこちら →
+    </a>
+  </div>
+</section><section id="news">
+  <h2 class="section-title">活動報告</h2>
+  <p class="section-sub">NEWS &amp; ACTIVITIES</p>
+  <div id="note-articles" aria-live="polite"><p>最新記事を読み込み中です。</p></div>
+  <p><a class="button" href="https://note.com/masakazu_tanaka">noteで活動報告をすべて見る →</a></p>
+</section>
+<div class="contact" id="contact"><div class="contact-inner"><h2 class="section-title">お問い合わせ</h2><p class="section-sub">CONTACT</p><p>ご意見・ご質問などは、メールでお寄せください。</p><p><a class="mail-link" href="mailto:masakazu.city@gmail.com?subject=%E3%83%9B%E3%83%BC%E3%83%A0%E3%83%9A%E3%83%BC%E3%82%B8%E3%81%8B%E3%82%89%E3%81%AE%E3%81%8A%E5%95%8F%E3%81%84%E5%90%88%E3%82%8F%E3%81%9B">✉　masakazu.city@gmail.com</a></p></div></div>
+</main>
+  
+<footer>
+  <p>田中まさかず事務所</p>
+  <p>習志野市藤崎3-20-15</p>
+  <p>© TANAKA MASAKAZU</p>
+</footer>
+  
+<script>
+(async function () {
+  const container = document.getElementById('note-articles');
+  try {
+    const response = await fetch('./note_articles.json', {cache:'no-cache'});
+    if (!response.ok) throw new Error('Article data unavailable');
+    const articles = await response.json();
+    if (!Array.isArray(articles)) throw new Error('Invalid article data');
+    if (!articles.length) {
+      container.textContent = '現在公開中のnote記事はありません。';
+      return;
+    }
+    container.replaceChildren();
+    const grid = document.createElement('div');
+    grid.className = 'note-grid';
+    for (const article of articles.slice(0, 3)) {
+      if (typeof article.url !== 'string' || !article.url.startsWith('https://note.com/')) continue;
+      const card = document.createElement('article');
+      card.className = 'note-card';
+      const link = document.createElement('a');
+      link.href = article.url;
+      link.target = '_blank';
+      link.rel = 'noopener noreferrer';
+      if (typeof article.image === 'string' && /^https:\/\//.test(article.image)) {
+        const img = document.createElement('img');
+        img.src = article.image;
+        img.alt = article.title || 'noteの記事の見出し画像';
+        img.loading = 'lazy';
+        link.appendChild(img);
+      }
+      const body = document.createElement('div');
+      body.className = 'note-card-body';
+      const date = document.createElement('time');
+      date.textContent = article.date || 'note';
+      if (article.date) date.dateTime = article.date;
+      const title = document.createElement('h3');
+      title.textContent = article.title || 'noteの記事を読む';
+      body.append(date, title);
+      link.appendChild(body);
+      card.appendChild(link);
+      grid.appendChild(card);
+    }
+    if (!grid.children.length) throw new Error('No valid articles');
+    container.appendChild(grid);
+  } catch (error) {
+    container.textContent = '最新記事を表示できませんでした。下のボタンからnoteをご覧ください。';
+  }
+})();
+</script>
+</body>
+  <!-- プロフィール写真更新 2026-11-05 --> 
+</html>

@@ -1,37 +1,49 @@
-name: Prepare the official site
+name: Publish official site
 
 on:
   push:
     branches: [main]
-    paths: ['.github/workflows/publish-site.yml']
+  schedule:
+    - cron: '17 * * * *'
   workflow_dispatch:
 
 permissions:
-  contents: write
+  contents: read
+
+concurrency:
+  group: official-site-pages
+  cancel-in-progress: false
 
 jobs:
-  prepare:
+  build:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - uses: actions/checkout@v4
         with:
-          repository: masakazu-narashino/masakazu-narashino.github.io
-          ref: 5382ebf06ee9c6ecf464dbda5abbd86ce16ecadb
-          path: source-snapshot
           persist-credentials: false
-      - name: Copy only the current public site files
+      - name: Build the site and refresh public note articles
         shell: bash
         run: |
-          set -euo pipefail
-          files=(index.html narashino-next.png portrait.jpg profile-dj.png profile-mikoshi.png profile-secretary.jpg signature.png update_note.py)
-          for file in "${files[@]}"; do
-            cp "source-snapshot/$file" "$file"
-            cmp "source-snapshot/$file" "$file"
-          done
-          python3 update_note.py
-          grep -Fq 'https://note.com/masakazu_tanaka' index.html
-          if grep -Fq '/blog/' index.html; then exit 1; fi
-          git add -- "${files[@]}" note_articles.json
-          git -c user.name='github-actions[bot]' -c user.email='41898282+github-actions[bot]@users.noreply.github.com' commit -m 'Add the official website and note integration'
-          git push origin HEAD:main
+          mkdir _site
+          git archive HEAD | tar -xf - -C _site --exclude=.github --exclude=blog --exclude=update_note.py --exclude=README.md
+          if ! python3 update_note.py; then
+            echo '::warning::Could not load the public note feed. The note profile link remains available.'
+            printf '[]\n' > note_articles.json
+          fi
+          cp note_articles.json _site/note_articles.json
+          test -f _site/index.html
+          test ! -e _site/blog
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: _site
+
+  deploy:
+    if: github.event.repository.name == 'masakazu-narashino.github.io'
+    needs: build
+    runs-on: ubuntu-latest
+    permissions:
+      pages: write
+      id-token: write
+    environment: github-pages
+    steps:
+      - uses: actions/deploy-pages@v4
